@@ -252,7 +252,7 @@ a {
 
 .contact-section {
     background: #f5f5f5;
-    padding: 60px 12vw;
+    padding: 50px 12vw;
 }
 
 .contact-inner {
@@ -305,8 +305,8 @@ a {
 }
 
 .social-links a {
-    width: 27px;
-    height: 27px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
 
