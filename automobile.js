@@ -100,14 +100,26 @@ const fullscreenButton = document.getElementById("fullscreenButton");
 
 let currentIndex = 0;
 
+function updatePhotoInfo() {
+
+    document.getElementById("lightboxDate").textContent =
+        "September 3, 2026";
+
+    document.getElementById("lightboxLocation").textContent =
+        "Beijing, China";
+
+}
+
 
 // Open
 
-function openLightbox(index) {
+ffunction openLightbox(index) {
 
     currentIndex = index;
 
     lightboxImage.src = photos[currentIndex].large;
+
+    updatePhotoInfo();
 
     lightbox.classList.add("active");
 
@@ -143,6 +155,7 @@ function showPrevious() {
     }
 
     lightboxImage.src = photos[currentIndex].large;
+    updatePhotoInfo();
 
 }
 
@@ -158,6 +171,7 @@ function showNext() {
     }
 
     lightboxImage.src = photos[currentIndex].large;
+    updatePhotoInfo();
 
 }
 
