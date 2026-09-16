@@ -331,6 +331,162 @@ a {
     transform: scale(1.06);
 }
 
+/* =========================================
+   AUTOMOBILE GALLERY
+========================================= */
+
+.automobile-page {
+    background: #ffffff;
+}
+
+
+/* Navigation */
+
+.automobile-navbar {
+    position: relative;
+
+    width: 100%;
+    height: 88px;
+
+    padding: 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    z-index: 20;
+}
+
+.automobile-logo {
+    font-size: 25px;
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    color: #111111;
+
+    transition: opacity 0.25s ease;
+}
+
+.automobile-logo:hover {
+    opacity: 0.65;
+}
+
+.automobile-nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 42px;
+}
+
+.automobile-nav-links a {
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    transition: opacity 0.25s ease;
+}
+
+.automobile-nav-links a:hover {
+    opacity: 0.55;
+}
+
+
+/* Title */
+
+.automobile-title {
+    padding: 100px 6vw 85px;
+
+    text-align: center;
+}
+
+.automobile-title h1 {
+    font-size: 42px;
+
+    font-weight: 300;
+
+    letter-spacing: 3px;
+
+    color: #111111;
+}
+
+
+/* Gallery */
+
+.automobile-gallery {
+    width: 88%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    column-gap: 32px;
+    row-gap: 85px;
+
+    align-items: start;
+
+    padding-bottom: 130px;
+}
+
+
+/* Individual photo */
+
+.automobile-photo {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    cursor: pointer;
+}
+
+.automobile-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition:
+        transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1),
+        filter 0.6s ease;
+}
+
+
+/* Hover ONLY when mouse is on image */
+
+.automobile-photo:hover img {
+    transform: scale(1.025);
+
+    filter: brightness(1.08);
+}
+
+
+/* Staggered layout */
+
+.automobile-photo:nth-child(4n + 1) {
+    margin-top: 0;
+}
+
+.automobile-photo:nth-child(4n + 2) {
+    margin-top: 55px;
+}
+
+.automobile-photo:nth-child(4n + 3) {
+    margin-top: 15px;
+}
+
+.automobile-photo:nth-child(4n + 4) {
+    margin-top: 75px;
+}
 
 /* =========================================
    MOBILE
