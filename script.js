@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Minhao Liu Photography — website loaded.");
+    const heroImage = document.querySelector(".hero-image");
+
+    if (heroImage.complete) {
+        heroImage.classList.add("loaded");
+    } else {
+        heroImage.addEventListener("load", () => {
+            heroImage.classList.add("loaded");
+        });
+    }
 
 });
