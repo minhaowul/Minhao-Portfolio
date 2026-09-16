@@ -774,3 +774,31 @@ a {
     max-width: 92vw;
     max-height: 88vh;
 }
+
+/* =========================================
+   PHOTO INFO
+========================================= */
+
+.lightbox-info {
+    margin-top: 18px;
+
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    color: #666;
+}
+
+.lightbox-info p {
+    margin: 0;
+}
+
+#lightboxDate {
+    font-weight: 500;
+}
+
+#lightboxLocation {
+    font-weight: 400;
+    color: #999;
+}
