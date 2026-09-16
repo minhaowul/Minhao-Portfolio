@@ -96,6 +96,7 @@ const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
 const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
+const fullscreenButton = document.getElementById("fullscreenButton");
 
 let currentIndex = 0;
 
@@ -166,6 +167,23 @@ lightboxPrev.addEventListener("click", showPrevious);
 
 lightboxNext.addEventListener("click", showNext);
 
+// =========================================
+// FULLSCREEN
+// =========================================
+
+fullscreenButton.addEventListener("click", () => {
+
+    if (!document.fullscreenElement) {
+
+        lightbox.requestFullscreen();
+
+    } else {
+
+        document.exitFullscreen();
+
+    }
+
+});
 
 // =========================================
 // CLICK OUTSIDE IMAGE TO CLOSE
