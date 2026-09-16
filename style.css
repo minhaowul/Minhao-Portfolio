@@ -1052,6 +1052,10 @@ a {
     visibility: visible;
 }
 
+.landscape-gallery.gallery-ready {
+    visibility: visible;
+}
+
 .landscape-photo {
     width: 100%;
 
