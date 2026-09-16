@@ -57,10 +57,10 @@ for (let i = 1; i <= totalPhotos; i++) {
         number: i,
 
         image:
-            `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/landscape/ls${i}.webp`,
+    `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
 
-        large:
-            `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/landscape/large/ls${i}.webp`,
+large:
+    `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`,
 
         location: locations[i - 1]
     });
