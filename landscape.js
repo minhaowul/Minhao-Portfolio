@@ -60,39 +60,74 @@ for (let i = 1; i <= totalPhotos; i++) {
 
 
 // =========================================
+// PRELOAD ALL NORMAL IMAGES
+// =========================================
+
+const preloadPromises = photos.map(photo => {
+
+    return new Promise(resolve => {
+
+        const img = new Image();
+
+        img.onload = () => {
+            resolve();
+        };
+
+        img.onerror = () => {
+            resolve();
+        };
+
+        img.src = photo.image;
+
+    });
+
+});
+
+
+// =========================================
 // PRELOAD LARGE IMAGES
 // =========================================
 
 photos.forEach(photo => {
+
     const img = new Image();
+
     img.src = photo.large;
+
 });
 
 
 // =========================================
-// CREATE GALLERY
+// CREATE GALLERY AFTER PRELOAD
 // =========================================
 
-photos.forEach((photo, index) => {
+Promise.all(preloadPromises).then(() => {
 
-    const photoElement = document.createElement("div");
+    photos.forEach((photo, index) => {
 
-    photoElement.className = "landscape-photo";
+        const photoElement = document.createElement("div");
 
-    photoElement.innerHTML = `
-    <img
-        src="${photo.image}"
-        alt="Landscape photography ${photo.number}"
-    >
-`;
+        photoElement.className = "landscape-photo";
 
-    photoElement.addEventListener("click", () => {
-        openLightbox(index);
+        photoElement.innerHTML = `
+            <img
+                src="${photo.image}"
+                alt="Landscape photography ${photo.number}"
+            >
+        `;
+
+        photoElement.addEventListener("click", () => {
+            openLightbox(index);
+        });
+
+        gallery.appendChild(photoElement);
+
     });
 
-    gallery.appendChild(photoElement);
-});
+    // Show the gallery only after all images are ready
+    gallery.classList.add("gallery-ready");
 
+});
 
 // =========================================
 // LIGHTBOX
