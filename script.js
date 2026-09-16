@@ -1,13 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const heroImage = document.querySelector(".hero-image");
+    const images = [
+        "automobile.jpg",
+        "landscape.jpg",
+        "street.jpg"
+    ];
 
-    if (heroImage.complete) {
-        heroImage.classList.add("loaded");
-    } else {
-        heroImage.addEventListener("load", () => {
-            heroImage.classList.add("loaded");
+    const preloadImages = images.map(src => {
+        return new Promise(resolve => {
+            const img = new Image();
+
+            img.onload = resolve;
+            img.onerror = resolve;
+
+            img.src = src;
         });
-    }
+    });
+
+    Promise.all(preloadImages).then(() => {
+        document.body.classList.add("images-loaded");
+    });
 
 });
