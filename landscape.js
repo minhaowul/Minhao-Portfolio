@@ -80,15 +80,11 @@ photos.forEach((photo, index) => {
     photoElement.className = "landscape-photo";
 
     photoElement.innerHTML = `
-        <img
-            src="${photo.image}"
-            alt="Landscape photography ${photo.number}"
-        >
-
-        <div class="landscape-location">
-            ${photo.location}
-        </div>
-    `;
+    <img
+        src="${photo.image}"
+        alt="Landscape photography ${photo.number}"
+    >
+`;
 
     photoElement.addEventListener("click", () => {
         openLightbox(index);
