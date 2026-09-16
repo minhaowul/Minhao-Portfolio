@@ -128,27 +128,37 @@ a {
 }
 
 .about-content {
-    max-width: 950px;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    text-align: center;
 }
 
 .about-content h2 {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 24px;
 
-    letter-spacing: -0.5px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    color: #111111;
 }
 
 .about-content p {
-    max-width: 900px;
+    max-width: 780px;
 
-    font-size: 20px;
-    line-height: 1.75;
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.8;
 
     font-weight: 400;
 
-    color: #111111;
+    color: #707070;
 }
 
 
