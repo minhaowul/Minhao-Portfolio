@@ -1,4 +1,5 @@
 const gallery = document.getElementById("landscapeGallery");
+const loading = document.getElementById("landscapeLoading");
 
 const totalPhotos = 37;
 
@@ -125,6 +126,7 @@ Promise.all(preloadPromises).then(() => {
 
     // Show the gallery only after all images are ready
     gallery.classList.add("gallery-ready");
+    loading.classList.add("hidden");
 
 });
 
