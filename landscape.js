@@ -13,8 +13,8 @@ for (let i = 1; i <= totalPhotos; i++) {
 
     photos.push({
         number: i,
-        image: `images/landscape/ls${i}.webp`,
-        large: `images/landscape/large/ls${i}.webp`
+        image: `images/images/landscape/ls${i}.webp`,
+        large: `images/images/landscape/large/ls${i}.webp`
     });
 
 }
