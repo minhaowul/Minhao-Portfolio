@@ -13,8 +13,8 @@ for (let i = 1; i <= totalPhotos; i++) {
 
     photos.push({
         number: i,
-        image: `images/images/landscape/ls${i}.webp`,
-        large: `images/images/landscape/large/ls${i}.webp`
+        image: `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
+large: `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`
     });
 
 }
