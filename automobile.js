@@ -116,7 +116,9 @@ function openLightbox(index) {
 }
 
 
-// Close
+// =========================================
+// CLOSE
+// =========================================
 
 function closeLightbox() {
 
@@ -124,8 +126,11 @@ function closeLightbox() {
 
     document.body.style.overflow = "";
 
-}
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
 
+}
 
 // Previous
 
@@ -191,8 +196,13 @@ fullscreenButton.addEventListener("click", () => {
 
 lightbox.addEventListener("click", event => {
 
-    if (event.target === lightbox) {
+    if (!event.target.closest(".lightbox-content") &&
+        !event.target.closest(".lightbox-arrow") &&
+        !event.target.closest(".lightbox-close") &&
+        !event.target.closest(".lightbox-fullscreen")) {
+
         closeLightbox();
+
     }
 
 });
