@@ -436,6 +436,12 @@ a {
     column-gap: 32px;
 
     padding-bottom: 130px;
+
+    visibility: hidden;
+}
+
+.automobile-gallery.gallery-ready {
+    visibility: visible;
 }
 
 .automobile-photo {
