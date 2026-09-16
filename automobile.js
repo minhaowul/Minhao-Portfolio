@@ -144,16 +144,20 @@ const preloadPromises = photos.map(photo => {
 
 
 // =========================================
-// PRELOAD LARGE IMAGES
+// BACKGROUND PRELOAD LARGE IMAGES
 // =========================================
 
-photos.forEach(photo => {
+function preloadLargeImages() {
 
-    const largeImg = new Image();
+    photos.forEach(photo => {
 
-    largeImg.src = photo.large;
+        const largeImg = new Image();
 
-});
+        largeImg.src = photo.large;
+
+    });
+
+}
 
 
 // =========================================
@@ -185,6 +189,10 @@ Promise.all(preloadPromises).then(() => {
 
     gallery.classList.add("gallery-ready");
     loading.classList.add("hidden");
+
+    setTimeout(() => {
+    preloadLargeImages();
+}, 100);
 
 });
 
