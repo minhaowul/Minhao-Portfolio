@@ -54,17 +54,16 @@ const photos = [];
 for (let i = 1; i <= totalPhotos; i++) {
 
     photos.push({
-        number: i,
+    number: i,
 
-        image:
-    `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
+    image:
+        `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
 
-large:
-    `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`,
+    large:
+        `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`,
 
-        location: locations[i - 1]
-    });
-
+    location: locations[i - 1]
+});
 }
 
 
