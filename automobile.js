@@ -41,6 +41,18 @@ const preloadPromises = photos.map(photo => {
 
 });
 
+// =========================================
+// PRELOAD ALL LARGE IMAGES
+// =========================================
+
+photos.forEach(photo => {
+
+    const largeImg = new Image();
+
+    largeImg.src = photo.large;
+
+});
+
 
 // =========================================
 // CREATE GALLERY
