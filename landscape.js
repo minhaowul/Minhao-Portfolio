@@ -1,94 +1,62 @@
-```javascript
 const gallery = document.getElementById("landscapeGallery");
 
 const totalPhotos = 37;
 
-
-// =========================================
-// PHOTO DATA
-// =========================================
-
 const locations = [
-    "Beijing",     // 1
-    "Beijing",     // 2
-    "Qingdao",     // 3
-    "Beijing",     // 4
-    "Beijing",     // 5
-    "Macau",       // 6
-    "Macau",       // 7
-    "Huizhou",     // 8
-    "Shenzhen",    // 9
-    "Hong Kong",   // 10
-    "Hong Kong",   // 11
-    "Macau",       // 12
-    "Zhuhai",      // 13
-    "Huizhou",     // 14
-    "Huizhou",     // 15
-    "Huizhou",     // 16
-    "Hong Kong",   // 17
-    "Hong Kong",   // 18
-    "Huizhou",     // 19
-    "Beijing",     // 20
-    "Qingdao",     // 21
-    "Huangshan",   // 22
-    "Beijing",     // 23
-    "Qingdao",     // 24
-    "Huangshan",   // 25
-    "Beijing",     // 26
-    "Beijing",     // 27
-    "Dali",        // 28
-    "Hong Kong",   // 29
-    "Hong Kong",   // 30
-    "Shenzhen",    // 31
-    "Dali",        // 32
-    "Dali",        // 33
-    "Macau",       // 34
-    "Beijing",     // 35
-    "Beijing",     // 36
-    "Hong Kong"    // 37
+    "Beijing",
+    "Beijing",
+    "Qingdao",
+    "Beijing",
+    "Beijing",
+    "Macau",
+    "Macau",
+    "Huizhou",
+    "Shenzhen",
+    "Hong Kong",
+    "Hong Kong",
+    "Macau",
+    "Zhuhai",
+    "Huizhou",
+    "Huizhou",
+    "Huizhou",
+    "Hong Kong",
+    "Hong Kong",
+    "Huizhou",
+    "Beijing",
+    "Qingdao",
+    "Huangshan",
+    "Beijing",
+    "Qingdao",
+    "Huangshan",
+    "Beijing",
+    "Beijing",
+    "Dali",
+    "Hong Kong",
+    "Hong Kong",
+    "Shenzhen",
+    "Dali",
+    "Dali",
+    "Macau",
+    "Beijing",
+    "Beijing",
+    "Hong Kong"
 ];
-
 
 const photos = [];
 
 for (let i = 1; i <= totalPhotos; i++) {
-
     photos.push({
-    number: i,
+        number: i,
 
-    image:
-        `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
+        image:
+            `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/ls${i}.webp`,
 
-    large:
-        `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`,
+        large:
+            `https://raw.githubusercontent.com/minhaowul/Minhao-Portfolio/refs/heads/main/images/images/landscape/large/ls${i}.webp`,
 
-    location: locations[i - 1]
-});
-}
-
-
-// =========================================
-// PRELOAD NORMAL IMAGES
-// =========================================
-
-const preloadPromises = photos.map(photo => {
-
-    const img = new Image();
-
-    img.src = photo.image;
-
-    return new Promise(resolve => {
-
-        if (img.complete) {
-            resolve();
-        } else {
-            img.onload = resolve;
-            img.onerror = resolve;
-        }
-
+        location: locations[i - 1]
     });
-
-});
+}
 
 
 // =========================================
@@ -96,11 +64,8 @@ const preloadPromises = photos.map(photo => {
 // =========================================
 
 photos.forEach(photo => {
-
-    const largeImg = new Image();
-
-    largeImg.src = photo.large;
-
+    const img = new Image();
+    img.src = photo.large;
 });
 
 
@@ -108,33 +73,28 @@ photos.forEach(photo => {
 // CREATE GALLERY
 // =========================================
 
-Promise.all(preloadPromises).then(() => {
+photos.forEach((photo, index) => {
 
-    photos.forEach((photo, index) => {
+    const photoElement = document.createElement("div");
 
-        const photoElement = document.createElement("div");
+    photoElement.className = "landscape-photo";
 
-        photoElement.className = "landscape-photo";
+    photoElement.innerHTML = `
+        <img
+            src="${photo.image}"
+            alt="Landscape photography ${photo.number}"
+        >
 
-        photoElement.innerHTML = `
-            <img
-                src="${photo.image}"
-                alt="Landscape photography ${photo.number}"
-            >
+        <div class="landscape-location">
+            ${photo.location}
+        </div>
+    `;
 
-            <div class="landscape-location">
-                ${photo.location}
-            </div>
-        `;
-
-        photoElement.addEventListener("click", () => {
-            openLightbox(index);
-        });
-
-        gallery.appendChild(photoElement);
-
+    photoElement.addEventListener("click", () => {
+        openLightbox(index);
     });
 
+    gallery.appendChild(photoElement);
 });
 
 
@@ -143,19 +103,12 @@ Promise.all(preloadPromises).then(() => {
 // =========================================
 
 const lightbox = document.getElementById("lightbox");
-
 const lightboxImage = document.getElementById("lightboxImage");
-
 const lightboxClose = document.getElementById("lightboxClose");
-
 const lightboxPrev = document.getElementById("lightboxPrev");
-
 const lightboxNext = document.getElementById("lightboxNext");
-
 const fullscreenButton = document.getElementById("fullscreenButton");
-
 const lightboxDate = document.getElementById("lightboxDate");
-
 const lightboxLocation = document.getElementById("lightboxLocation");
 
 let currentIndex = 0;
@@ -179,7 +132,6 @@ function openLightbox(index) {
     lightbox.classList.add("active");
 
     document.body.style.overflow = "hidden";
-
 }
 
 
@@ -196,7 +148,6 @@ function closeLightbox() {
     if (document.fullscreenElement) {
         document.exitFullscreen();
     }
-
 }
 
 
@@ -218,7 +169,6 @@ function showPrevious() {
 
     lightboxLocation.textContent =
         photos[currentIndex].location;
-
 }
 
 
@@ -240,7 +190,6 @@ function showNext() {
 
     lightboxLocation.textContent =
         photos[currentIndex].location;
-
 }
 
 
@@ -249,9 +198,7 @@ function showNext() {
 // =========================================
 
 lightboxClose.addEventListener("click", closeLightbox);
-
 lightboxPrev.addEventListener("click", showPrevious);
-
 lightboxNext.addEventListener("click", showNext);
 
 
@@ -264,15 +211,10 @@ fullscreenButton.addEventListener("click", event => {
     event.stopPropagation();
 
     if (!document.fullscreenElement) {
-
         lightbox.requestFullscreen();
-
     } else {
-
         document.exitFullscreen();
-
     }
-
 });
 
 
@@ -288,11 +230,8 @@ lightbox.addEventListener("click", event => {
         !event.target.closest(".lightbox-close") &&
         !event.target.closest(".lightbox-fullscreen")
     ) {
-
         closeLightbox();
-
     }
-
 });
 
 
@@ -317,6 +256,4 @@ document.addEventListener("keydown", event => {
     if (event.key === "ArrowRight") {
         showNext();
     }
-
 });
-```
