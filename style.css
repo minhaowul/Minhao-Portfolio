@@ -750,13 +750,6 @@ a {
 }
 
 
-/* Hover */
-
-.lightbox-close:hover,
-.lightbox-arrow:hover {
-    opacity: 0.45;
-}
-
 /* =========================================
    FULLSCREEN
 ========================================= */
@@ -814,4 +807,146 @@ a {
 #lightboxLocation {
     font-weight: 400;
     color: #999;
+}
+
+/* =========================================
+   MOBILE & TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .automobile-gallery {
+        column-count: 3;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .automobile-navbar {
+        width: 90%;
+        height: 72px;
+    }
+
+    .automobile-nav-links {
+        gap: 22px;
+    }
+
+    .automobile-nav-links a {
+        font-size: 11px;
+    }
+
+    .automobile-logo {
+        font-size: 22px;
+    }
+
+    .automobile-title {
+        width: 90%;
+        padding: 55px 0 40px;
+    }
+
+    .automobile-title h1 {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    .automobile-gallery {
+        width: 90%;
+        column-count: 2;
+        column-gap: 18px;
+    }
+
+    .automobile-photo {
+        margin-bottom: 18px;
+    }
+
+    .contact-section {
+        padding: 45px 8vw;
+    }
+
+    .contact-inner {
+        min-height: 190px;
+    }
+
+    .social-links {
+        gap: 22px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .automobile-navbar {
+        width: 88%;
+        height: 68px;
+    }
+
+    .automobile-nav-links {
+        gap: 12px;
+    }
+
+    .automobile-nav-links a {
+        font-size: 9px;
+        letter-spacing: 0.2px;
+    }
+
+    .automobile-logo {
+        font-size: 20px;
+    }
+
+    .automobile-title {
+        width: 88%;
+        padding: 48px 0 32px;
+    }
+
+    .automobile-title h1 {
+        font-size: 22px;
+        letter-spacing: 1.8px;
+    }
+
+    .automobile-gallery {
+        width: 88%;
+        column-count: 1;
+        padding-bottom: 80px;
+    }
+
+    .automobile-photo {
+        margin-bottom: 18px;
+    }
+
+    .lightbox-content {
+        max-width: 92vw;
+        max-height: 82vh;
+    }
+
+    .lightbox-content img {
+        max-width: 92vw;
+        max-height: 76vh;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .lightbox-fullscreen {
+        left: 16px;
+        top: 20px;
+    }
+
+    .lightbox-close {
+        right: 16px;
+        top: 20px;
+    }
+
+    .lightbox-info {
+        margin-top: 12px;
+        font-size: 11px;
+    }
+
 }
