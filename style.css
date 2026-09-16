@@ -763,16 +763,29 @@ a {
 
 .lightbox:fullscreen {
     background: #ffffff;
+    padding: 0 6vw;
 }
 
 .lightbox:fullscreen .lightbox-content {
-    max-width: 92vw;
-    max-height: 94vh;
+    width: 100%;
+    max-width: 88vw;
+    max-height: 96vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lightbox:fullscreen .lightbox-content img {
-    max-width: 92vw;
-    max-height: 88vh;
+    display: block;
+
+    max-width: 88vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
 }
 
 /* =========================================
