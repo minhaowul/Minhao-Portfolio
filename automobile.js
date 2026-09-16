@@ -10,16 +10,18 @@ const totalPhotos = 82;
 const photos = [];
 
 for (let i = 1; i <= totalPhotos; i++) {
+
     photos.push({
         number: i,
         image: `images/automobile/ph${i}.webp`,
         large: `images/automobile/large/ph${i}.webp`
     });
+
 }
 
 
 // =========================================
-// PRELOAD ALL PHOTOS
+// PRELOAD NORMAL IMAGES
 // =========================================
 
 const preloadPromises = photos.map(photo => {
@@ -41,8 +43,9 @@ const preloadPromises = photos.map(photo => {
 
 });
 
+
 // =========================================
-// PRELOAD ALL LARGE IMAGES
+// PRELOAD LARGE IMAGES
 // =========================================
 
 photos.forEach(photo => {
@@ -91,29 +94,42 @@ Promise.all(preloadPromises).then(() => {
 // =========================================
 
 const lightbox = document.getElementById("lightbox");
+
 const lightboxImage = document.getElementById("lightboxImage");
 
 const lightboxClose = document.getElementById("lightboxClose");
+
 const lightboxPrev = document.getElementById("lightboxPrev");
+
 const lightboxNext = document.getElementById("lightboxNext");
+
 const fullscreenButton = document.getElementById("fullscreenButton");
+
+const lightboxDate = document.getElementById("lightboxDate");
+
+const lightboxLocation = document.getElementById("lightboxLocation");
 
 let currentIndex = 0;
 
+
+// =========================================
+// PHOTO INFO
+// =========================================
+
 function updatePhotoInfo() {
 
-    document.getElementById("lightboxDate").textContent =
-        "September 3, 2026";
+    lightboxDate.textContent = "September 3, 2026";
 
-    document.getElementById("lightboxLocation").textContent =
-        "Beijing, China";
+    lightboxLocation.textContent = "Beijing, China";
 
 }
 
 
-// Open
+// =========================================
+// OPEN
+// =========================================
 
-ffunction openLightbox(index) {
+function openLightbox(index) {
 
     currentIndex = index;
 
@@ -144,7 +160,10 @@ function closeLightbox() {
 
 }
 
-// Previous
+
+// =========================================
+// PREVIOUS
+// =========================================
 
 function showPrevious() {
 
@@ -155,12 +174,15 @@ function showPrevious() {
     }
 
     lightboxImage.src = photos[currentIndex].large;
+
     updatePhotoInfo();
 
 }
 
 
-// Next
+// =========================================
+// NEXT
+// =========================================
 
 function showNext() {
 
@@ -171,6 +193,7 @@ function showNext() {
     }
 
     lightboxImage.src = photos[currentIndex].large;
+
     updatePhotoInfo();
 
 }
@@ -186,11 +209,14 @@ lightboxPrev.addEventListener("click", showPrevious);
 
 lightboxNext.addEventListener("click", showNext);
 
+
 // =========================================
 // FULLSCREEN
 // =========================================
 
-fullscreenButton.addEventListener("click", () => {
+fullscreenButton.addEventListener("click", event => {
+
+    event.stopPropagation();
 
     if (!document.fullscreenElement) {
 
@@ -204,16 +230,19 @@ fullscreenButton.addEventListener("click", () => {
 
 });
 
+
 // =========================================
-// CLICK OUTSIDE IMAGE TO CLOSE
+// CLICK OUTSIDE
 // =========================================
 
 lightbox.addEventListener("click", event => {
 
-    if (!event.target.closest(".lightbox-content") &&
+    if (
+        !event.target.closest(".lightbox-content") &&
         !event.target.closest(".lightbox-arrow") &&
         !event.target.closest(".lightbox-close") &&
-        !event.target.closest(".lightbox-fullscreen")) {
+        !event.target.closest(".lightbox-fullscreen")
+    ) {
 
         closeLightbox();
 
