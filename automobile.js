@@ -13,7 +13,7 @@ for (let i = 1; i <= totalPhotos; i++) {
     photos.push({
         number: i,
         image: `images/automobile/ph${i}.webp`,
-        large: `images/automobile/ph${i}-large.webp`
+        large: `images/automobile/large/ph${i}.webp`
     });
 }
 
