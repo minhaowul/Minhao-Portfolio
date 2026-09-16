@@ -1,5 +1,7 @@
 const gallery = document.getElementById("automobileGallery");
 
+const loading = document.getElementById("automobileLoading");
+
 const totalPhotos = 82;
 
 
@@ -182,6 +184,7 @@ Promise.all(preloadPromises).then(() => {
     });
 
     gallery.classList.add("gallery-ready");
+    loading.classList.add("hidden");
 
 });
 
