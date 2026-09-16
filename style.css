@@ -1138,6 +1138,10 @@ a {
 
 @media (max-width: 800px) {
 
+   .gallery-loading {
+    width: 90%;
+}
+
     .landscape-navbar {
         width: 90%;
         height: 72px;
@@ -1179,6 +1183,10 @@ a {
 
 
 @media (max-width: 520px) {
+
+   .gallery-loading {
+    width: 88%;
+}
 
     .landscape-navbar {
         width: 88%;
