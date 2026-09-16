@@ -419,7 +419,7 @@ a {
 ========================================= */
 
 .automobile-gallery {
-    width: 88%;
+    width: 94%;
     max-width: 1500px;
 
     margin: 0 auto;
@@ -461,24 +461,6 @@ a {
 .automobile-photo:hover img {
     transform: scale(1.025);
     filter: brightness(1.08);
-}
-
-/* Staggered layout */
-
-.automobile-photo:nth-child(4n + 1) {
-    margin-top: 0;
-}
-
-.automobile-photo:nth-child(4n + 2) {
-    margin-top: 55px;
-}
-
-.automobile-photo:nth-child(4n + 3) {
-    margin-top: 15px;
-}
-
-.automobile-photo:nth-child(4n + 4) {
-    margin-top: 75px;
 }
 
 /* =========================================
