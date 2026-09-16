@@ -575,3 +575,112 @@ a {
     }
 
 }
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Image */
+
+.lightbox-content {
+    max-width: 82vw;
+    max-height: 88vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-content img {
+    display: block;
+
+    max-width: 82vw;
+    max-height: 82vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Close */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 28px;
+    right: 42px;
+
+    border: none;
+    background: none;
+
+    font-size: 34px;
+    font-weight: 300;
+
+    color: #111;
+
+    cursor: pointer;
+}
+
+
+/* Arrows */
+
+.lightbox-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    color: #111;
+
+    cursor: pointer;
+
+    padding: 30px;
+}
+
+.lightbox-prev {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+
+/* Hover */
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+    opacity: 0.45;
+}
