@@ -133,6 +133,12 @@ a {
     padding: 150px 10vw 155px;
 }
 
+.about-section {
+    background: #ffffff;
+
+    padding: 150px 10vw 155px;
+}
+
 .about-content {
     max-width: 900px;
 
@@ -142,9 +148,9 @@ a {
 }
 
 .about-content h2 {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 
-    font-size: 22px;
+    font-size: 20px;
 
     font-weight: 600;
 
@@ -160,13 +166,12 @@ a {
 
     font-size: 16px;
 
-    line-height: 1.85;
+    line-height: 1.95;
 
     font-weight: 400;
 
-    color: #707070;
+    color: #858585;
 }
-
 
 /* =========================================
    WORK
