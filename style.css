@@ -1045,6 +1045,10 @@ a {
 
     padding-bottom: 130px;
 
+    visibility: hidden;
+}
+
+.landscape-gallery.gallery-ready {
     visibility: visible;
 }
 
