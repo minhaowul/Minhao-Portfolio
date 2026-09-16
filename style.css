@@ -1086,19 +1086,22 @@ a {
 .gallery-loading {
     width: 94%;
     max-width: 1500px;
-
     margin: 0 auto;
-
     padding: 0 0 55px;
 
     font-size: 11px;
     letter-spacing: 0.5px;
-
     color: #999999;
-
     text-align: left;
 
-    transition: opacity 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease,
+        height 0.4s ease,
+        padding 0.4s ease;
 }
 
 .gallery-loading.hidden {
