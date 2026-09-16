@@ -1079,6 +1079,31 @@ a {
         filter 0.6s ease;
 }
 
+.gallery-loading {
+    width: 94%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 0 0 55px;
+
+    font-size: 11px;
+    letter-spacing: 0.5px;
+
+    color: #999999;
+
+    text-align: left;
+
+    transition: opacity 0.3s ease;
+}
+
+.gallery-loading.hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+}
+
 .landscape-location {
     margin-top: 10px;
 
