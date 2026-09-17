@@ -150,6 +150,59 @@ a {
 }
 
 /* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 50%;
+    bottom: 32px;
+
+    width: 18px;
+    height: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+}
+
+.scroll-indicator span {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 1px;
+    height: 22px;
+
+    background: #ffffff;
+
+    transform: translateX(-50%);
+
+    animation: scrollLine 2.6s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+}
+
+/* =========================================
    ABOUT
 ========================================= */
 
