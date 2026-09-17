@@ -91,11 +91,15 @@ Promise.all(preloadPromises).then(() => {
         photoElement.className = "street-photo";
 
         photoElement.innerHTML = `
-            <img
-                src="${photo.image}"
-                alt="Street photography ${photo.number}"
-            >
-        `;
+    <img
+        src="${photo.image}"
+        alt="Street photography ${photo.number}"
+    >
+
+    <span class="photo-number">
+        ${String(photo.number).padStart(2, "0")} / ${String(photos.length).padStart(2, "0")}
+    </span>
+`;
 
         photoElement.addEventListener("click", () => {
             openLightbox(index);
