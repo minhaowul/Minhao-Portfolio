@@ -24,14 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Promise.all(preloadImages).then(() => {
 
-        // 第一屏显示
-        if (heroImage) {
+    // 第一屏延迟后开始淡入
+    if (heroImage) {
+
+        setTimeout(() => {
             heroImage.classList.add("loaded");
-        }
+        }, 200);
 
-        // 三张作品封面同时显示
-        document.body.classList.add("images-loaded");
+    }
 
-    });
+    // 三张作品封面同时显示
+    document.body.classList.add("images-loaded");
+
+});
 
 });
