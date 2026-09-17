@@ -1,246 +1,223 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <meta charset="UTF-8">
+```
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Street Photography — Minhao Liu">
+<meta
+    name="description"
+    content="Street Photography — Minhao Liu"
+>
 
-    <title>Street - Minhao Liu Photography</title>
+<title>Street - Minhao Liu Photography</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+```
 
 </head>
 
-
 <body class="street-page">
 
+```
+<header class="street-navbar">
 
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
-
-    <header class="street-navbar">
-
-        <a href="index.html" class="street-logo">
-            ML
-        </a>
-
-        <nav class="street-nav-links">
-
-    <a href="index.html">
-        HOME
+    <a href="index.html" class="street-logo">
+        ML
     </a>
 
-    <a href="index.html#about">
-        ABOUT ME
-    </a>
+    <nav class="street-nav-links">
 
-    <a href="index.html#work">
-        WORK
-    </a>
+        <a href="index.html">HOME</a>
 
-    <a href="street.html#contact">
-        CONTACT
-    </a>
+        <a href="index.html#about">ABOUT ME</a>
 
-</nav>
+        <a href="index.html#work">WORK</a>
 
-    </header>
+        <a href="street.html#contact">CONTACT</a>
+
+    </nav>
+
+</header>
 
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
+<main>
 
-    <main>
+    <section class="street-title">
 
-        <section class="street-title">
+        <h1>STREET</h1>
 
-            <h1>STREET</h1>
-
-        </section>
+    </section>
 
 
-        <!-- LOADING -->
-
-        <div class="gallery-loading" id="streetLoading">
-            Loading...
-        </div>
+    <div class="gallery-loading" id="streetLoading">
+        Loading...
+    </div>
 
 
-        <!-- GALLERY -->
+    <section
+        class="street-gallery"
+        id="streetGallery"
+    >
 
-                <section
-            class="street-gallery"
-            id="streetGallery">
+        <!-- Photos will be generated automatically -->
 
-            <!-- Photos will be generated automatically -->
-
-        </section>
-
-
-        <!-- ==================== CONTACT ==================== -->
-
-        <section class="contact-section" id="contact">
-
-            <div class="contact-inner">
+    </section>
 
 
-                <!-- LEFT -->
+    <section class="contact-section" id="contact">
 
-                <div class="contact-info">
+        <div class="contact-inner">
 
-                    <h2>Minhao Liu Photography</h2>
+            <div class="contact-info">
 
-                    <p>Beijing, China</p>
+                <h2>Minhao Liu Photography</h2>
 
-                    <p>WeChat: b1ank_wul_0710</p>
+                <p>Beijing, China</p>
 
-                    <p>
-                        <a href="mailto:minhaoliu16@gmail.com">
-                            minhaoliu16@gmail.com
-                        </a>
-                    </p>
+                <p>WeChat: b1ank_wul_0710</p>
 
-                </div>
-
-
-                <!-- RIGHT -->
-
-                <div class="social-links">
-
-                    <a
-                        href="https://www.xiaohongshu.com/user/profile/42963577496"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Xiaohongshu"
-                    >
-
-                        <img
-                            src="https://cdn.simpleicons.org/xiaohongshu"
-                            alt="Xiaohongshu"
-                        >
-
+                <p>
+                    <a href="mailto:minhaoliu16@gmail.com">
+                        minhaoliu16@gmail.com
                     </a>
-
-
-                    <a
-                        href="https://500px.com/p/minhaoliu16"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="500px"
-                    >
-
-                        <img
-                            src="https://cdn.simpleicons.org/500px"
-                            alt="500px"
-                        >
-
-                    </a>
-
-
-                    <a
-                        href="https://www.instagram.com/b1ank_wul/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Instagram"
-                    >
-
-                        <img
-                            src="https://cdn.simpleicons.org/instagram"
-                            alt="Instagram"
-                        >
-
-                    </a>
-
-                </div>
-
+                </p>
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="social-links">
 
+                <a
+                    href="https://www.xiaohongshu.com/user/profile/42963577496"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Xiaohongshu"
+                >
 
-    <!-- =========================================
-         LIGHTBOX
-    ========================================= -->
-    
-    <div class="lightbox" id="lightbox">
+                    <img
+                        src="https://cdn.simpleicons.org/xiaohongshu"
+                        alt="Xiaohongshu"
+                    >
 
-        <button
-            class="lightbox-fullscreen"
-            id="fullscreenButton"
-            aria-label="Fullscreen">
-
-            ⛶
-
-        </button>
+                </a>
 
 
-        <button
-            class="lightbox-close"
-            id="lightboxClose"
-            aria-label="Close">
+                <a
+                    href="https://500px.com/p/minhaoliu16"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="500px"
+                >
 
-            ×
+                    <img
+                        src="https://cdn.simpleicons.org/500px"
+                        alt="500px"
+                    >
 
-        </button>
-
-
-        <button
-            class="lightbox-arrow lightbox-prev"
-            id="lightboxPrev">
-
-            ←
-
-        </button>
+                </a>
 
 
-        <div class="lightbox-content">
+                <a
+                    href="https://www.instagram.com/b1ank_wul/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
 
-            <img
-                id="lightboxImage"
-                src=""
-                alt="">
+                    <img
+                        src="https://cdn.simpleicons.org/instagram"
+                        alt="Instagram"
+                    >
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
 
 
-            <div class="lightbox-info">
+<div class="lightbox" id="lightbox">
 
-    <p id="lightboxLocation"></p>
+    <button
+        class="lightbox-fullscreen"
+        id="fullscreenButton"
+        aria-label="Fullscreen"
+    >
+        ⛶
+    </button>
 
-</div>
 
-        <button
-            class="lightbox-arrow lightbox-next"
-            id="lightboxNext">
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close"
+    >
+        ×
+    </button>
 
-            →
 
-        </button>
+    <button
+        class="lightbox-arrow lightbox-prev"
+        id="lightboxPrev"
+    >
+        ←
+    </button>
+
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightboxImage"
+            src=""
+            alt=""
+        >
+
+        <div class="lightbox-info">
+
+            <p id="lightboxLocation"></p>
+
+        </div>
 
     </div>
 
 
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
+    <button
+        class="lightbox-arrow lightbox-next"
+        id="lightboxNext"
+    >
+        →
+    </button>
 
-    <script src="street.js"></script>
+</div>
+
+
+<script src="street.js"></script>
+```
 
 </body>
 
