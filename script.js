@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroImage) {
 
         setTimeout(() => {
-            heroImage.classList.add("loaded");
-        }, 100);
+    heroImage.classList.add("loaded");
+}, 50);
 
     }
 
