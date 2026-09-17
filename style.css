@@ -306,17 +306,17 @@ a {
     justify-content: center;
 }
 
-.social-links svg {
-    width: 30px;
-    height: 30px;
-    color: #111111;
+.social-links img {
+    width: 32px;
+    height: 32px;
     opacity: 0.48;
+    filter: grayscale(100%);
     transition:
         opacity 0.25s ease,
         transform 0.25s ease;
 }
 
-.social-links a:hover svg {
+.social-links a:hover img {
     opacity: 0.85;
     transform: scale(1.06);
 }
