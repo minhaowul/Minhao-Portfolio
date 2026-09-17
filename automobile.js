@@ -2,7 +2,6 @@ const gallery = document.getElementById("automobileGallery");
 
 const loading = document.getElementById("automobileLoading");
 
-const totalPhotos = 82;
 
 
 // =========================================
