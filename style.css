@@ -1587,3 +1587,15 @@ a {
     transform: scale(1.025);
     filter: brightness(1.08);
 }
+
+/* =========================================
+   SMOOTH SCROLL
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overscroll-behavior-y: none;
+}
