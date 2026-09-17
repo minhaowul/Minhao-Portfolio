@@ -111,7 +111,7 @@ a {
     display: block;
     filter: brightness(0.65);
     opacity: 0;
-    transition: opacity 1.2s ease-out;
+    transition: opacity 0.95s ease-out;
 }
 .hero-image.loaded {
     opacity: 1;
