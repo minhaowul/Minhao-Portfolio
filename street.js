@@ -185,6 +185,12 @@ function openLightbox(index) {
 
 function closeLightbox() {
 
+    if (document.fullscreenElement) {
+
+        document.exitFullscreen().catch(() => {});
+
+    }
+
     lightbox.classList.remove("active");
 
     document.body.style.overflow = "";
@@ -313,7 +319,7 @@ fullscreenButton.addEventListener("click", event => {
 
     } else {
 
-        document.exitFullscreen();
+        document.exitFullscreen().catch(() => {});
 
     }
 
