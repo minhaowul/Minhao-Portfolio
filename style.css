@@ -1102,19 +1102,6 @@ a {
     padding: 0;
 }
 
-.landscape-location {
-    margin-top: 10px;
-
-    font-size: 11px;
-    line-height: 1.5;
-
-    color: #888888;
-
-    font-weight: 400;
-
-    letter-spacing: 0.2px;
-}
-
 .landscape-photo:hover img {
     transform: scale(1.025);
     filter: brightness(1.08);
