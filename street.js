@@ -271,28 +271,6 @@ lightboxClose.addEventListener(
     }
 );
 
-
-/* =========================================
-   CLICK OUTSIDE IMAGE TO CLOSE
-========================================= */
-
-lightbox.addEventListener(
-    "click",
-    event => {
-
-        if (
-            event.target === lightbox ||
-            event.target === lightboxImage.parentElement
-        ) {
-
-            closeLightbox();
-
-        }
-
-    }
-);
-
-
 /* =========================================
    KEYBOARD
 ========================================= */
@@ -325,21 +303,31 @@ document.addEventListener(
    FULLSCREEN
 ========================================= */
 
-fullscreenButton.addEventListener(
-    "click",
-    event => {
+fullscreenButton.addEventListener("click", event => {
 
-        event.stopPropagation();
+    event.stopPropagation();
 
-        if (!document.fullscreenElement) {
+    if (!document.fullscreenElement) {
 
-            lightbox.requestFullscreen();
+        lightbox.requestFullscreen().catch(() => {});
 
-        } else {
+    } else {
 
-            document.exitFullscreen();
-
-        }
+        document.exitFullscreen();
 
     }
-);
+
+});
+
+
+/* =========================================
+   CLOSE WHEN CLICKING OUTSIDE CONTENT
+========================================= */
+
+lightbox.addEventListener("click", event => {
+
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+
+});
