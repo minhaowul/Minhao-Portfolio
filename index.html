@@ -34,6 +34,13 @@
         rel="stylesheet"
     >
 
+    <link
+    rel="preload"
+    as="image"
+    href="home.jpg"
+    fetchpriority="high"
+>
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -64,10 +71,12 @@
         <section class="hero" id="home">
 
             <img
-                class="hero-image"
-                src="home.jpg"
-                alt="Minhao Liu Photography"
-            >
+    class="hero-image"
+    src="home.jpg"
+    alt="Minhao Liu Photography"
+    fetchpriority="high"
+    decoding="async"
+>
 
         </section>
 
