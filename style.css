@@ -251,7 +251,7 @@ a {
 
 .contact-section {
     background: #f5f5f5;
-    padding: 50px 12vw;
+    padding: 35px 12vw;
 }
 
 .contact-inner {
@@ -260,9 +260,8 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    min-height: 220px;
+    min-height: 190px;
 }
-
 
 /* Left information */
 
