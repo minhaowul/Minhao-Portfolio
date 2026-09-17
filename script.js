@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
             heroImage.classList.add("loaded");
-        }, 200);
+        }, 100);
 
     }
 
