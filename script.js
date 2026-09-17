@@ -39,3 +39,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 });
+
+// ==================== BACK TO TOP ====================
+
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+
+    window.addEventListener('scroll', () => {
+
+        if (window.scrollY > window.innerHeight * 0.7) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+
+    });
+
+    backToTop.addEventListener('click', () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    });
+
+}
