@@ -306,21 +306,18 @@ a {
     justify-content: center;
 }
 
-.social-links img {
-    width: 32px;
-    height: 32px;
+.social-links svg {
+    width: 30px;
+    height: 30px;
+    color: #111111;
     opacity: 0.48;
-
-    filter: grayscale(100%);
-
     transition:
         opacity 0.25s ease,
         transform 0.25s ease;
 }
 
-.social-links a:hover img {
+.social-links a:hover svg {
     opacity: 0.85;
-
     transform: scale(1.06);
 }
 
