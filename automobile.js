@@ -194,6 +194,10 @@ Promise.all(preloadPromises).then(() => {
     preloadLargeImages();
 }, 100);
 
+    setTimeout(() => {
+    alignGalleryBottom();
+}, 150);
+
 });
 
 
@@ -383,3 +387,25 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+function alignGalleryBottom() {
+    const galleries = [
+        document.querySelector(".automobile-gallery"),
+        document.querySelector(".landscape-gallery"),
+        document.querySelector(".street-gallery")
+    ].filter(Boolean);
+
+    if (galleries.length === 0) return;
+
+    galleries.forEach(gallery => {
+        gallery.style.minHeight = "";
+    });
+
+    const maxHeight = Math.max(
+        ...galleries.map(gallery => gallery.offsetHeight)
+    );
+
+    galleries.forEach(gallery => {
+        gallery.style.minHeight = `${maxHeight}px`;
+    });
+}
