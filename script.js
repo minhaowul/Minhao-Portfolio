@@ -39,3 +39,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 });
+
+// =========================================
+// SUBTLE SMOOTH WHEEL SCROLL
+// =========================================
+
+let scrollTarget = window.scrollY;
+let scrollCurrent = window.scrollY;
+let isScrolling = false;
+
+window.addEventListener("wheel", event => {
+
+    if (event.ctrlKey) return;
+
+    event.preventDefault();
+
+    scrollTarget += event.deltaY * 0.72;
+
+    const maxScroll =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+    scrollTarget = Math.max(
+        0,
+        Math.min(scrollTarget, maxScroll)
+    );
+
+    if (!isScrolling) {
+        isScrolling = true;
+        smoothScroll();
+    }
+
+}, { passive: false });
+
+
+function smoothScroll() {
+
+    scrollCurrent +=
+        (scrollTarget - scrollCurrent) * 0.085;
+
+    window.scrollTo(0, scrollCurrent);
+
+    if (Math.abs(scrollTarget - scrollCurrent) > 0.5) {
+
+        requestAnimationFrame(smoothScroll);
+
+    } else {
+
+        scrollCurrent = scrollTarget;
+        window.scrollTo(0, scrollCurrent);
+        isScrolling = false;
+
+    }
+
+}
