@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================================
-// SUBTLE SMOOTH WHEEL SCROLL
+// VERY LIGHT SMOOTH SCROLL
 // =========================================
 
 let scrollTarget = window.scrollY;
@@ -54,7 +54,7 @@ window.addEventListener("wheel", event => {
 
     event.preventDefault();
 
-    scrollTarget += event.deltaY * 0.72;
+    scrollTarget += event.deltaY * 0.92;
 
     const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -75,11 +75,11 @@ window.addEventListener("wheel", event => {
 function smoothScroll() {
 
     scrollCurrent +=
-        (scrollTarget - scrollCurrent) * 0.085;
+        (scrollTarget - scrollCurrent) * 0.18;
 
     window.scrollTo(0, scrollCurrent);
 
-    if (Math.abs(scrollTarget - scrollCurrent) > 0.5) {
+    if (Math.abs(scrollTarget - scrollCurrent) > 0.3) {
 
         requestAnimationFrame(smoothScroll);
 
