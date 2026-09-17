@@ -793,15 +793,11 @@ a {
     font-size: 12px;
     line-height: 1.7;
 
-    color: #666;
+    color: #999;
 }
 
 .lightbox-info p {
     margin: 0;
-}
-
-#lightboxDate {
-    font-weight: 500;
 }
 
 #lightboxLocation {
@@ -1046,10 +1042,6 @@ a {
     padding-bottom: 130px;
 
     visibility: hidden;
-}
-
-.landscape-gallery.gallery-ready {
-    visibility: visible;
 }
 
 .landscape-gallery.gallery-ready {
