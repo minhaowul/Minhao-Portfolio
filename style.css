@@ -1232,6 +1232,8 @@ a {
     background: #eeeeee;
 
     cursor: pointer;
+
+    position: relative;
 }
 
 .landscape-photo img {
@@ -1545,6 +1547,8 @@ a {
 
     background: #eeeeee;
     cursor: pointer;
+
+    position: relative;
 }
 
 .street-photo img {
