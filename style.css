@@ -1602,7 +1602,7 @@ body {
 
 .fivehundred-logo {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     font-family: Arial, Helvetica, sans-serif;
@@ -1618,16 +1618,27 @@ body {
 
 /* 5 */
 .fivehundred-logo .five {
-    font-size: 25px;
     display: inline-block;
-    transform: translateY(0);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    transform: skewX(-8deg);
+    transform-origin: bottom;
 }
 
-/* 00 */
+/* 两个 0 */
 .fivehundred-logo .zero {
-    font-size: 21px;
     display: inline-block;
-    transform: scaleX(0.78);
-    transform-origin: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+
+    transform:
+        scaleX(0.78)
+        scaleY(0.5)
+        skewX(-8deg);
+
+    transform-origin: bottom center;
+
     margin-left: -1px;
 }
