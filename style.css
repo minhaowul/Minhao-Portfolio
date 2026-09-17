@@ -459,6 +459,8 @@ a {
 }
 
 .automobile-nav-links a {
+    position: relative;
+
     color: #111111;
 
     font-size: 13px;
@@ -469,8 +471,36 @@ a {
     transition: opacity 0.25s ease;
 }
 
+.automobile-nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #111111;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
 .automobile-nav-links a:hover {
-    opacity: 0.55;
+    opacity: 0.9;
+}
+
+.automobile-nav-links a:hover::after {
+    transform: scaleX(1);
+    opacity: 0.7;
 }
 
 
@@ -1065,16 +1095,48 @@ a {
 }
 
 .landscape-nav-links a {
+    position: relative;
+
     color: #111111;
+
     font-size: 13px;
     font-weight: 600;
+
     letter-spacing: 0.4px;
 
     transition: opacity 0.25s ease;
 }
 
+.landscape-nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #111111;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
 .landscape-nav-links a:hover {
-    opacity: 0.55;
+    opacity: 0.9;
+}
+
+.landscape-nav-links a:hover::after {
+    transform: scaleX(1);
+    opacity: 0.7;
 }
 
 
@@ -1333,15 +1395,48 @@ a {
 }
 
 .street-nav-links a {
+    position: relative;
+
     color: #111111;
+
     font-size: 13px;
     font-weight: 600;
+
     letter-spacing: 0.4px;
+
     transition: opacity 0.25s ease;
 }
 
+.street-nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 100%;
+    height: 1px;
+
+    background: #111111;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
 .street-nav-links a:hover {
-    opacity: 0.55;
+    opacity: 0.9;
+}
+
+.street-nav-links a:hover::after {
+    transform: scaleX(1);
+    opacity: 0.7;
 }
 
 
